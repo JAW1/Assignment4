@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Suggestion List";
+}
+
+@model IEnumerable<Assignment4.Models.RestaurantSuggestion>
+
+<div class="container">
+ 
+    <table class="table">
+        <thead>
+            <tr><th>Name</th><th>Restaurant Name</th><th>Favorite Dish</th><th>Restaurant Phone #</th></tr>
+        </thead>
+        <tbody>
+            @foreach (Assignment4.Models.RestaurantSuggestion x in Model)
+            {
+                <tr>
+                    <td>@x.SuggestorName</td>
+                    <td>@x.RestaurantName</td>
+                    <td>@x.FavoriteDish</td>
+                    <td>@x.RestaurantPhone</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

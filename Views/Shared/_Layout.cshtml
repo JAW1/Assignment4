@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Best Restaurants in Provo</title>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+</head>
+
+<!-- A grey horizontal navbar that becomes vertical on small screens -->
+<nav class="navbar navbar-expand-sm bg-light">
+
+    <!-- Links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" asp-action="Index">Top 5 Restaurants</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-action="SubmitSuggestions">New Suggestions</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-action="ViewSuggestions">View Suggestions</a>
+        </li>
+    </ul>
+
+</nav>
+<body>
+    <div class="text-center">
+        <h1>@ViewBag.Title</h1>
+    </div>
+
+    @RenderBody()
+
+
+    <footer>Jacob Welling, Inc. 2021</footer>
+</body>
+</html>
